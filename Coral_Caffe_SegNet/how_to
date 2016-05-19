@@ -1,0 +1,15 @@
+to train, run the following command:
+
+/home/dschreib/caffe_segnet/build/tools/caffe train -gpu 1 -solver /home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_solver_coral.prototxt 
+
+will save in the "training" folder a checkpoint every 1000 iterations.
+
+to resume from snapshot:
+
+/home/dschreib/caffe_segnet/build/tools/caffe train -gpu 1 -solver /home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_solver_coral.prototxt –snapshot /home/dschreib/Corals/Coral_Caffe_Segnet/Training/segnet_iter_7000.solverstate 
+
+how to resume, this is the one that actually works:
+/home/dschreib/caffe_segnet/build/tools/caffe train -gpu 1 -solver /home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_solver_coral.prototxt -snapshot /home/dschreib/Corals/Coral_Caffe_SegNet/Training/segnet_iter_4000.solverstate
+
+
+option –snapshot=segnet_iter_7000.solverstate
