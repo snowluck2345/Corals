@@ -1,0 +1,5 @@
+how_to segmenter:
+find . -type f -name '*.png' -remove
+ to remove old segmented files from "chopped" directory
+ 
+ then run segmenter

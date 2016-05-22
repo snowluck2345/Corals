@@ -2,7 +2,7 @@ net: "/home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_train_coral.prototx
 test_initialization: false
 test_iter: 1
 test_interval: 10000000
-base_lr: 0.0005
+base_lr: 0.001
 lr_policy: "step"
 gamma: 1.0
 stepsize: 10000000

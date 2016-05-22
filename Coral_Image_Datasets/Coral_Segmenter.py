@@ -132,14 +132,14 @@ for j in range(len(nice_image_sets)):
 
     current_dims = size_image[list(nice_image_sets[j])[i]]
     base_image_size = current_dims[0]
-    min_overlap_pixels = 100 #total overlap in an image, both sides
-    sub_image_size = 640 #square image
+    min_overlap_pixels = 50 #total overlap in an image, both sides
+    sub_image_size = 320 #square image
     segment_indexes_width = image_segmenter_index_finder(base_image_size, min_overlap_pixels, sub_image_size)
 
     current_dims = size_image[list(nice_image_sets[j])[i]]
     base_image_size = current_dims[1]
-    min_overlap_pixels = 100 #total overlap in an image, both sides
-    sub_image_size = 480 #square image
+    min_overlap_pixels = 50 #total overlap in an image, both sides
+    sub_image_size = 240 #square image
     segment_indexes_height = image_segmenter_index_finder(base_image_size, min_overlap_pixels, sub_image_size)
 
     #print segment_indexes_width

@@ -172,7 +172,7 @@ def make_parser():
 
 args = {}
 args['train_model'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_train_coral.prototxt'
-args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Training/segnet_iter_18000.caffemodel'
+args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Training/segnet_iter_5000.caffemodel'
 args['out_dir'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/Inference/'
 
 print args['train_model']
@@ -198,7 +198,7 @@ if __name__ == '__main__':
     train_size = len(train_ims)
     minibatch_size = testable_msg.layer[0].dense_image_data_param.batch_size
     num_iterations = train_size // minibatch_size + train_size % minibatch_size
-    in_h, in_w =(360, 480)
+    in_h, in_w =(240, 320)
     test_net, test_msg = make_test_files(BN_calc_path, args['weights'], num_iterations,
                                          in_h, in_w)
     
@@ -209,6 +209,6 @@ if __name__ == '__main__':
     #    f.write(text_format.MessageToString(test_msg))
     
     print "Saving test net weights..."
-    test_net.save(os.path.join(args['out_dir'], "coral_weights_05_14_18000_new.caffemodel"))
+    test_net.save(os.path.join(args['out_dir'], "coral_weights_small.caffemodel"))
     print "done"
 

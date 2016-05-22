@@ -6,7 +6,7 @@ layer {
   top: "label"
   dense_image_data_param {
     source: "/home/dschreib/Corals/Coral_Image_Datasets/train.txt"
-    batch_size: 2
+    batch_size: 14
     shuffle: true
   }
 }
@@ -819,8 +819,8 @@ layer {
   top: "pool5_D"
   upsample_param {
     scale: 2
-    upsample_h: 30
-    upsample_w: 40
+    upsample_h: 15
+    upsample_w: 20
   }
 }
 layer {
@@ -1002,8 +1002,8 @@ layer {
   top: "pool4_D"
   upsample_param {
     scale: 2
-    upsample_h: 60
-    upsample_w: 80
+    upsample_h: 30
+    upsample_w: 40
   }
 }
 layer {
@@ -1583,10 +1583,10 @@ layer {
   loss_param {
     ignore_label: 4
     weight_by_label_freqs: true
-    class_weighting: 1.1505
-    class_weighting: 3.4088
-    class_weighting: 0.2232
-    class_weighting: 2.7851
+    class_weighting: 25.3
+    class_weighting: 0.77
+    class_weighting: 0.606
+    class_weighting: 18.194
   }
   softmax_param {
     engine: CAFFE

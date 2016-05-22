@@ -25,8 +25,8 @@ import cv2
 
 args = {}
 args['model'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_inference_coral.prototxt'
-args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/Inference/coral_weights_05_14_18000_new.caffemodel'
-args['iter'] = '203'
+args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/Inference/coral_weights_small.caffemodel'
+args['iter'] = '664'
 
 print int(args['iter'])
 
@@ -92,7 +92,7 @@ for i in range(0, int(args['iter'])):
     cv2.imwrite('test_result_' + str(i) + '.png', r)
     cv2.imwrite('test_label_' + str(i) + '.png', np.squeeze(label))
     cv2.imwrite('test_image_' + str(i) + '.png', np.swapaxes(np.transpose(image),0,1))
-    accuracy.append((np.squeeze(label) == r).sum(axis=0).sum(axis=0)/(640.0 * 480.0))
+    accuracy.append((np.squeeze(label) == r).sum(axis=0).sum(axis=0)/(320.0 * 240.0))
 print output.shape
 print np.asarray(accuracy).sum(axis=0) / float(args['iter'])
 print os.getcwd()
