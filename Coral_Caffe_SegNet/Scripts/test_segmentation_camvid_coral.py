@@ -25,7 +25,7 @@ import cv2
 
 args = {}
 args['model'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_inference_coral.prototxt'
-args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/Inference/coral_weights_05_14_18000_new.caffemodel'
+args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/Inference/coral_weights_05_22_3000_new.caffemodel'
 args['iter'] = '203'
 
 print int(args['iter'])

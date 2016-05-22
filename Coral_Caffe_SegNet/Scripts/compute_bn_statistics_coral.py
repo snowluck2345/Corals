@@ -172,7 +172,7 @@ def make_parser():
 
 args = {}
 args['train_model'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/segnet_train_coral.prototxt'
-args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Training/segnet_iter_18000.caffemodel'
+args['weights'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Training/segnet_iter_3000.caffemodel'
 args['out_dir'] = '/home/dschreib/Corals/Coral_Caffe_SegNet/Models/Inference/'
 
 print args['train_model']
@@ -209,6 +209,6 @@ if __name__ == '__main__':
     #    f.write(text_format.MessageToString(test_msg))
     
     print "Saving test net weights..."
-    test_net.save(os.path.join(args['out_dir'], "coral_weights_05_14_18000_new.caffemodel"))
+    test_net.save(os.path.join(args['out_dir'], "coral_weights_05_22_3000_new.caffemodel"))
     print "done"
 
